@@ -2,7 +2,11 @@
 
 This repository tracks my progress through the TryHackMe cybersecurity learning path
 
-Each room has a summary of what I learned, the tools I used, and the hands on stuff I did.
+Each room includes:
+
+- What I learned  
+- What tools I used  
+- The work I did
 
 ##  Paths Covered
 
