@@ -39,7 +39,7 @@ Data is broken into packets and frames before being sent over a network.
 - A **packet** exists at Layer 3 (Network). It includes things like source/destination IP addresses and a TTL (Time to Live) value.
 - A **frame** exists at Layer 2 (Data Link). It wraps the packet and includes MAC addresses for delivery across the local network.
 
-Think of it like putting an envelope (packet) into a bigger envelope (frame) before mailing it. When the frame is opened at the destination, the packet is still inside.
+Its like putting an envelope (packet) into a bigger envelope (frame) before mailing it. When the frame is opened at the destination, the packet is still inside.
 
 ### Headers
 
