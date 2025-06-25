@@ -126,6 +126,11 @@ VPN (Virtual Private Network) connects two networks over the internet securely.
 
 ## LAN Networking Devices
 
+### MAC vs IP Address
+
+- **MAC Address**: address that identifies a device on the local network. Stays the same.
+- **IP Address**: address that can change based on the network. Used to route data across networks.
+
 ### Routers
 
 Routers connect different networks together and figure out the best path for data. They work at **Layer 3** Network Layer and handle routing between devices on separate networks.
