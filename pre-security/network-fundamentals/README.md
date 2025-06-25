@@ -74,7 +74,7 @@ UDP headers are simpler and lighter than TCP. No sequence numbers, no acknowledg
 Ports are how devices know where to send data within a system. Think of them like doors to specific applications.
 
 - Port numbers range from 0 to 65535.
-- **Common ports** (0–1023) are standardized:
+- **Common ports**:
   - 21 – FTP
   - 22 – SSH
   - 80 – HTTP
