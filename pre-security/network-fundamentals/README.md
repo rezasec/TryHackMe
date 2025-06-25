@@ -78,11 +78,9 @@ Ports are how devices know where to send data within a system. Think of them lik
   - 21 – FTP
   - 22 – SSH
   - 80 – HTTP
-  - 443 – HTTPS
+  - 443 – HTTPS(secure version)
   - 445 – SMB
   - 3389 – RDP
-
-Apps usually use the standard port, but they can run on custom ones (like HTTP on port 8080). If they do, we need to specify the port explicitly (e.g. `http://example.com:8080`).
 
 ---
 
