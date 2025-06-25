@@ -12,7 +12,7 @@ Each room includes:
 
 ###  Pre-Security
   - [Introduction to Cyber Security](./pre-security/introduction-to-cyber-security) – Practiced offensive and defensive security, explored ethical hacking with a fake banking site, and learned SOC analyst tasks, SIEM tools, and incident response.
-  - [Network Fundamentals](./network-fundamentals/network-fundamentals.md) – Covers the core concepts of networking like routers, switches, VPNs, firewalls, and how networks work.
+  - [Network Fundamentals](./pre-security/network-fundamentals) – Covers the core concepts of networking like routers, switches, VPNs, firewalls, and how networks work.
 
 
 
