@@ -1,6 +1,6 @@
 # Network Fundamentals
 
-In this README, I go over everything I learned about how computer networks work. From understanding what networking is to exploring routers, switches, VPNs, firewalls, and how they all connect.
+In this README, I go over how computer networks work. From understanding what networking is to exploring routers, switches, VPNs, firewalls, and how they all connect.
 
 ## What is Networking?
 
