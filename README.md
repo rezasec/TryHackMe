@@ -11,9 +11,10 @@ Each room includes:
 ##  Paths Covered
 
 ###  Pre-Security
-  - [Introduction to Cyber Security](./pre-security/introduction-to-cyber-security) – Practiced offensive and defensive security, explored ethical hacking with a fake banking site, and learned SOC analyst tasks, SIEM tools, and incident response.
-  - [Network Fundamentals](./pre-security/network-fundamentals) – Covers the core concepts of networking like routers, switches, VPNs, firewalls, and how networks work.
-
+| Module | Description | Skills Practiced |
+|--------|-------------|------------------|
+| [Introduction to Cyber Security](./pre-security/introduction-to-cyber-security) | Learned about offensive and defensive security. I practiced ethical hacking on a fake bank site and worked through SOC analyst tasks using a simulated SIEM. | dirb, SIEM, IPS, threat intelligence, incident response |
+| [Network Fundamentals](./pre-security/network-fundamentals) | Covered the basics of how networks work, including routers, switches, VPNs, firewalls, ARP, packet flow, and port forwarding | OSI model, MAC vs IP, TCP/IP, VLANs, subnetting, firewalls |
 
 
 
