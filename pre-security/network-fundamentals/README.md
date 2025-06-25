@@ -55,7 +55,7 @@ TCP (Transmission Control Protocol) ensures data is sent reliably. It sets up a 
 2. **SYN/ACK** – Server replies: “Here’s mine, and I got yours.”
 3. **ACK** – Client confirms and starts sending data.
 
-Each piece of data has a **sequence number**, and the receiver sends an **acknowledgement number** to confirm.
+Each piece of data has a sequence number, and the receiver sends an acknowledgement number to confirm.
 
 TCP guarantees data delivery but is slower because of all these checks. It’s used for things like web browsing and email.
 
@@ -65,7 +65,7 @@ TCP guarantees data delivery but is slower because of all these checks. It’s u
 
 UDP (User Datagram Protocol) skips the handshake. It just sends data fast and simple. No guarantees the data will arrive or arrive in order. It’s used for things like video calls, gaming, or streaming where speed matters more than reliability.
 
-UDP headers are simpler and lighter than TCP. No sequence numbers, no acknowledgements—just source/destination IP, ports, and the data.
+UDP headers are simpler and lighter than TCP. No sequence numbers, no acknowledgements just source/destination IP, ports, and the data.
 
 ---
 
@@ -91,8 +91,8 @@ Ports are how devices know where to send data within a system. Think of them lik
 Port forwarding lets users outside a local network (like the internet) access services inside it. Without it, a web server in your home/office would only be available to your local network.
 
 With port forwarding:
-- Your **router** sends traffic on a specific public port (like 80) to the correct **internal IP and port** (like 192.168.1.10:80).
-- This makes your internal service (like a website) accessible from the internet.
+- Router sends traffic on a specific public port (like 80) to the correct *nternal IP and port* like 192.168.1.10:80. 
+- This makes internal service like a website accessible from the internet.
 
 ### Firewalls 
 
@@ -100,8 +100,6 @@ Firewalls control what traffic is allowed in and out of a network. They can bloc
 
 - **Stateful firewalls** – Track entire connections. Smarter, but use more resources.
 - **Stateless firewalls** – Check each packet against rules. Faster, but dumber.
-
-Big companies like coinbase likely use **stateful firewalls** for advanced control.
 
 I practiced blocking malicious traffic on port 80 based on source IP.
 
@@ -111,8 +109,8 @@ I practiced blocking malicious traffic on port 80 based on source IP.
 
 VPN (Virtual Private Network) connects two networks over the internet securely.
 
-- It **encrypts** data, so nobody like ISPs or hackers on public Wi-Fi can snoop.
-- It creates a **tunnel** between locations like office A and office B, making devices on both sides feel like they’re on the same network.
+- It encrypts data, so nobody like ISPs or hackers on public WiFi can snoop.
+- It creates a tunnel between locations like office A and office B, making devices on both sides feel like they’re on the same network.
 
 ### VPN Types
 
@@ -131,7 +129,7 @@ VPN (Virtual Private Network) connects two networks over the internet securely.
 
 ### Routers
 
-Routers connect different networks together and figure out the best path for data. They work at **Layer 3** Network Layer and handle routing between devices on separate networks.
+Routers connect different networks together and figure out the best path for data. They work at Layer 3 Network Layer and handle routing between devices on separate networks.
 
 They also manage stuff like:
 - Port forwarding
