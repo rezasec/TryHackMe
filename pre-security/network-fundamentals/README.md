@@ -5,6 +5,7 @@ In this README, I go over everything I learned about how computer networks work.
 ## What is Networking?
 
 Networking is how computers talk to each other and exchange data. Whether it’s browsing the web, using email, or sharing files, networking makes it all happen. Devices connect together to form networks, and these networks can talk to each other to create something even bigger(internet).
+
 ---
 
 ## Intro to LAN
