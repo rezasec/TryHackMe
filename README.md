@@ -1,4 +1,4 @@
-# TryHackMe CyberSecurity
+# TryHackMe 
 
 This repository tracks my progress through the TryHackMe cybersecurity learning path
 
