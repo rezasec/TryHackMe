@@ -5,7 +5,7 @@
 
 ### Connecting to a Machine with SSH
   - `ssh username@ip address`
-  - SSH is used to securely log into remote systems.
+  - SSH is used to securely log into remote systems. SSH lets you securely send commands from your computer (AttackBox) to a remote machine (Target Machine). 
 
 ###  Navigating the Filesystem
 - `pwd` – show the full path of your current directory.
@@ -42,6 +42,10 @@
 
 ##  Part 2: Interacting with Files
 
+- `flags` - modifiers you can attach to commands to change how they behave ( - or --). 
+- ` ls -a` - list all files, including hidden ones
+- ` ls --help` - show all possible flags/switches and what they do
+  
 ###  Creating and Managing Files
 - `touch filename` – Create an empty file.
 - `mkdir foldername` – Make a new folder.
@@ -57,43 +61,41 @@
 - Run `ls -l` to see file permissions 
 - Permissions are split into **owner**, **group**, and **others**:
   - r = read, w = write, x = execute (-rwxr-xr--)
-  - rwx : owner has read, write, and execute.
+  - rw- : user owner has read, write, and execute.
   - r-x : group has read and execute.
   - r-- : others have read only.
-- `su username` or `su - username` – Switch to another user.
+- `su username` – switch to another user.
 
 ### Important Directories
 | Directory | Purpose |
 |----------|---------|
-| `/etc` | Config files like sudoers, passwd |
-| `/var` | Logs, backups, runtime data |
-| `/root` | Home for root user |
-| `/tmp` | Temporary storage (wiped on reboot) |
+| `/etc` | Stores essential system config files. Config files like sudoers, passwd | 
+| `/var` | Contains variable data like logs and service data. Logs, backups, runtime data. Useful for analysis or investigation |
+| `/root` | Home directory for the root user. |
+| `/tmp` | A writable directory for temporary file storage (wiped on reboot). |
 
 ---
 
 ##  Part 3: Practical System Use
 
 ### Terminal Text Editors
-- `nano filename` – Easy editor. Ctrl+O to save, Ctrl+X to exit.
-- `vim filename` – Advanced editor. (Not covered deeply here.)
+Efficiently editing files from the terminal is essential in system administration, scripting, automation, and troubleshooting.
+- `nano filename` – Easy editor. Ctrl+O to save, Ctrl+X to exit, Ctrl+W to search, Ctrl+k/Ctril+u to cut/paste.
+  - Use nano to quickly modify config files, write scripts, or troubleshoot logs on remote systems via SSH.
+- `vim filename` – Advanced and customizable editor
 
 ### Downloading Files
+Transferring files is fundamental for scripting, backups, CTFs, and pentesting. Knowing how to download from the internet, copy across machines, or serve own files is vital for speed and flexibility in Linux environments.
 - `wget http://example.com/file.txt`
-- Starts a file download from a URL.
+- use to download files from the internet via HTTP/HTTP (web downloading). 
 
 ### Copying Files Between Systems
-- From local → remote:
-  ```bash
-  scp myfile.txt user@ip:/path/to/destination
-  ```
-- From remote → local:
-  ```bash
-  scp user@ip:/path/file.txt ./localname.txt
-  ```
-
+`scp` - secure copy from SSH. Securely transfers files between local ↔ remote systems.
+- From local → remote: scp myfile.txt user@ip:/path/to/destination
+- From remote → local: scp user@ip:/path/file.txt ./localname.txt
+  
 ### Hosting Files with Python (Quick Server)
-- `python3 -m http.server` – Serve files in current directory on port 8000.
+- `python3 -m http.server` – Quickly share files in a directory by running a web server. Serve files in current directory on port 8000. 
 - Access it via browser or `wget http://ip:8000/filename`
 
 ### Processes and Performance
@@ -118,11 +120,14 @@
 
 ### Cron Jobs
 - View/edit crontab: `crontab -e`
-- Format:
-  ```
-  MIN HOUR DOM MON DOW CMD
+Format:
+- `MIN` - Minute (0–59) ex = 0
+- `HOUR` - Hour (0–23)	ex = */12
+- `DOM` - Day of Month (1–31)	ex = *
+- `MON` - Month (1–12)	ex =*
+- `DOW` - Day of Week (0–7, Sun=0/7)	ex = *
+- `CMD` - Command to execute	ex = cp ...
 
-  ```
 - Example: Run every 12 hours
   ```
   0 */12 * * * cp -R /home/user/Documents /backup/
@@ -138,14 +143,10 @@
 - `apt remove packagename`
 
 ### Adding Repos Manually
-- Add GPG key:
-  ```bash
-  wget -qO - https://... | sudo apt-key add -
-  ```
-- Add source:
-  ```bash
-  sudo nano /etc/apt/sources.list.d/custom.list
-  ```
+- Add GPG key: wget -qO - https://... | sudo apt-key add -
+ 
+- Add source: sudo nano /etc/apt/sources.list.d/custom.list
+
 - Then `apt update` and install.
 
 ---
