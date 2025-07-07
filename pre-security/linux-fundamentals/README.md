@@ -40,9 +40,12 @@
 - `file filename` – Show what type of file it is (text, binary, image, etc.).
 
 ### Permissions and Ownership
-- Run `ls -l` to see file permissions (e.g., `-rw-r--r--`).
+- Run `ls -l` to see file permissions 
 - Permissions are split into **owner**, **group**, and **others**:
-  - r = read, w = write, x = execute
+  - r = read, w = write, x = execute (-rwxr-xr--)
+  - rwx : owner has read, write, and execute.
+  - r-x : group has read and execute.
+  - r-- : others have read only.
 - `su username` or `su - username` – Switch to another user.
 
 ### Important Directories
