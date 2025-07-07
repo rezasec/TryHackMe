@@ -1,4 +1,4 @@
-# Linux Fundamentals: Part 1, 2 & 3 summary
+# Linux Fundamentals: Part 1, 2 & 3 
 
 
 ## Part 1: The Basics
