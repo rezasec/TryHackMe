@@ -129,10 +129,7 @@ Format:
 - `CMD` - Command to execute	ex = cp ...
 
 - Example: Run every 12 hours
-  ```
-  0 */12 * * * cp -R /home/user/Documents /backup/
-  ```
-
+ 0 */12 * * * cp -R /home/user/Documents /backup/
 ---
 
 ## Package Management (APT)
