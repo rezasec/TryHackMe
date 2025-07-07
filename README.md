@@ -16,6 +16,8 @@ Each room includes:
 | [Introduction to Cyber Security](./pre-security/introduction-to-cyber-security) | Learned about offensive and defensive security. I practiced ethical hacking on a fake bank site and worked through SOC analyst tasks using a simulated SIEM. | dirb, SIEM, IPS, threat intelligence, incident response |
 | [Network Fundamentals](./pre-security/network-fundamentals) | Covered the basics of how networks work, including routers, switches, VPNs, firewalls, ARP, packet flow, and port forwarding | OSI model, MAC vs IP, TCP/IP, VLANs, subnetting, firewalls |
 | [How The Web Works](./pre-security/how-the-web-works) | DNS, HTTP, web infrastructure, frontend/backend overview | Networking & Web Foundations |
+[Linux Fundamentals](./pre-security/linux-fundamentals) | Learned how to navigate and operate Linux systems using the command line. Covered file operations, permissions, user management, services, cron jobs, logging, and package management. | Shell navigation, file permissions, process management, service control, automation
+
 
 
 
