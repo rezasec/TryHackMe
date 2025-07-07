@@ -8,11 +8,15 @@
   - SSH is used to securely log into remote systems.
 
 ###  Navigating the Filesystem
-- `pwd` – Print current directory.
-- `ls` – List files.
+- `pwd` – show the full path of your current directory.
+- `ls` – List files/folders in the current directory
 - `ls -l` – Show detailed file info (permissions, owner, size).
 - `cd foldername` – Move into a folder.
 - `cd ..` – Go up one level.
+- `echo` - prints text to the screen. 
+- `whoami` - tells you which user your currently logged in as (used to verify session identity).
+- `cat` - contents of the file
+  
 
 ### Viewing File Content
 - `cat file` – View all contents at once.
@@ -20,9 +24,19 @@
 - `head file` – First 10 lines.
 - `tail file` – Last 10 lines.
 
-### Finding Files and Getting Help
+### Finding Files and Getting Help (search what we need fast and efficiently) 
+-`find` - Used to search the filesystem for files and directories (use it when you dont know where a file is). 
 - `find . -name filename` – Search for a file starting from current dir.
 - `man command` – Open the manual for a command.
+- `grep` - Use to search inside files for specific words or values.
+
+### Shell Operators
+- Symbols that let you do more advanced stuff with Linux commands like running things in the background, chaining commands, or redirecting output to files.
+- `&` - run a command in the background so your terminal isn’t stuck waiting (cp bigfile.zip backup/ &). 
+- `&&` - lets you chain commands, but the second one only runs if the first one works. cd test will only run if the mkdir test command succeeds. (mkdir test && cd test) 
+- `>`- take the output of a command and save it into a file. If the file exists, it will be overwritten (echo hey > welcome) (cat welcome = hey).
+- `>>` - Same as >, but this one appends to the file instead of replacing the contents ( echo hello >> welcome) (cat welcome = hey hello)
+
 
 ---
 
