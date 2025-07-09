@@ -17,6 +17,7 @@ Each room includes:
 | [Network Fundamentals](./pre-security/network-fundamentals) | Covered the basics of how networks work, including routers, switches, VPNs, firewalls, ARP, packet flow, and port forwarding | OSI model, MAC vs IP, TCP/IP, VLANs, subnetting, firewalls |
 | [How The Web Works](./pre-security/how-the-web-works) | DNS, HTTP, web infrastructure, frontend/backend overview | Networking & Web Foundations |
 [Linux Fundamentals](./pre-security/linux-fundamentals) | Learned how to navigate and operate Linux systems using the command line. Covered file operations, permissions, user management, services, cron jobs, logging, and package management. | Shell navigation, file permissions, process management, service control, automation
+| [Windows Fundamentals](./pre-security/windows-fundamentals) | Explored how to navigate and manage Windows operating systems. Learned system configuration, user account control, file systems, task manager, registry, command line tools, and security features like firewall, updates, and Windows Defender. | Windows navigation, system configuration, task scheduling, command prompt usage, registry editing, update management, firewall setup, threat protection |
 
 
 
