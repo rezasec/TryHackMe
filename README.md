@@ -27,7 +27,7 @@ It includes:
 ## Certifications
 
 ### Pre Security 
-📄 [View Pre-Security Certificate](./pre-security/certification.pdf)
+[View Pre-Security Certificate](./pre-security/certification.pdf)
 
 
 ---
