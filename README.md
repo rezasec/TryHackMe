@@ -1,4 +1,4 @@
-# TryHackMe Cybersecurity Labs
+# TryHackMe Cybersecurity 
 
 This repository documents my hands on progress through TryHackMe's guided labs and learning paths, covering real world cybersecurity concepts and tools.
 
