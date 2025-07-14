@@ -166,21 +166,23 @@ No need to log in manually. These commands let you run things remotely which is 
 
 ## Types of Linux Shells
 
-`echo $SHELL` - view your current shell
-`cat /etc/shells` - see all installed shells
+- `echo $SHELL` - view your current shell
+- `cat /etc/shells` - see all installed shells
 - command shell types - Bash, Fish, ZSH
+
 | Feature             | Bash               | Fish                       | Zsh                            |
-| ------------------- | ------------------ | -------------------------- | ------------------------------ |
-| Full Name           | Bourne Again Shell | Friendly Interactive Shell | Z Shell                        |
-| Scripting           | Extensive support  | Limited compared to others | Strong, modern scripting       |
-| Tab Completion      | Basic              | Advanced and user-guided   | Extensible via plugins         |
-| Customization       | Basic              | Good, interactive          | Advanced (`oh-my-zsh`, themes) |
-| User Friendliness   | Traditional        | Very beginner-friendly     | High with customization        |
-| Syntax Highlighting | Not built-in       | Built-in                   | Available with plugins         |
+|---------------------|--------------------|-----------------------------|--------------------------------|
+| **Full Name**       | Bourne Again Shell | Friendly Interactive Shell | Z Shell                        |
+| **Scripting**       | Extensive support  | Limited scripting features | Strong, modern scripting       |
+| **Tab Completion**  | Basic              | Advanced and contextual     | Extensible via plugins         |
+| **Customization**   | Basic              | Good via interactive tools | Advanced (`oh-my-zsh`, themes) |
+| **User Friendliness** | Traditional      | Very beginner-friendly     | High with proper setup         |
+| **Syntax Highlighting** | Not built-in  | Built-in                   | Available via plugins          |
+
 
 ## Shell Scripting and components
 Shell scripting automates tasks by grouping commands into .sh files. Key concepts:
 
-`#!/bin/bash` - tells the system to use the bash interpreter (shebang)
-`chmod +x script.sh` - gives execute permissions. used after the script
-`./script.sh` - running the script
+- `#!/bin/bash` - tells the system to use the bash interpreter (shebang)
+- `chmod +x script.sh` - gives execute permissions. used after the script
+- `./script.sh` - running the script
