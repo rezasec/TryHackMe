@@ -142,3 +142,45 @@ No need to log in manually. These commands let you run things remotely which is 
 ---
 
 # Part 3 - Linux Shells
+
+## Introduction to Linux Shells
+
+- Most users interact with OSs using GUIs, but Linux power users often prefer the CLI (Command Line Interface) for efficiency and control.
+- The **Shell** is the interpreter that reads commands from users and executes them in the OS.
+- Using the CLI is like cooking in the kitchen yourself (vs. being served at a restaurant via the GUI).
+- Learning the Linux shell gives users more flexibility, power, and automation capabilities.
+
+---
+
+## How to Interact With a Shell
+
+- Most distributions use **Bash** as the default shell.
+- Common shell commands:
+  - `pwd` – shows the current working directory
+  - `cd <directory>` – changes the working directory
+  - `ls` – lists directory contents
+  - `cat <file>` – displays the contents of a file
+  - `grep <pattern> <file>` – searches for a pattern in a file
+
+---
+
+## Types of Linux Shells
+
+`echo $SHELL` - view your current shell
+`cat /etc/shells` - see all installed shells
+- command shell types - Bash, Fish, ZSH
+| Feature             | Bash               | Fish                       | Zsh                            |
+| ------------------- | ------------------ | -------------------------- | ------------------------------ |
+| Full Name           | Bourne Again Shell | Friendly Interactive Shell | Z Shell                        |
+| Scripting           | Extensive support  | Limited compared to others | Strong, modern scripting       |
+| Tab Completion      | Basic              | Advanced and user-guided   | Extensible via plugins         |
+| Customization       | Basic              | Good, interactive          | Advanced (`oh-my-zsh`, themes) |
+| User Friendliness   | Traditional        | Very beginner-friendly     | High with customization        |
+| Syntax Highlighting | Not built-in       | Built-in                   | Available with plugins         |
+
+## Shell Scripting and components
+Shell scripting automates tasks by grouping commands into .sh files. Key concepts:
+
+`#!/bin/bash` - tells the system to use the bash interpreter (shebang)
+`chmod +x script.sh` - gives execute permissions. used after the script
+`./script.sh` - running the script
