@@ -22,6 +22,8 @@ It includes:
 ### Cybersecurity 101
 | Module | Description | Skills Practiced |
 |--------|-------------|------------------|
+| [Command Line](./pre-security/command-line) | Practiced core command line skills across Windows PowerShell, Command Prompt, and Linux shells. Navigated files and directories, managed users, handled permissions, interacted with services, and automated tasks. Also worked with process monitoring, hashing, remote execution, and scripting basics. | File system navigation, user and permission management, file operations, service control, PowerShell scripting, hashing, remote command execution, cross platform command line usage |
+
 ---
 
 ## Certifications
