@@ -1,6 +1,6 @@
 # TryHackMe Cybersecurity 
 
-This repository documents my hands on progress through TryHackMe's guided labs and learning paths, covering real world cybersecurity concepts and tools.
+This repository documents my progress through TryHackMe's cybersecurity learning path, covering real world concepts and tools.
 
 It includes:
 
