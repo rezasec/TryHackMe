@@ -88,7 +88,7 @@ The receiver reverses this whole process and gets back the original data.
 
 ---
 
-## Task 7 — Telnet
+## Telnet
 
 Telnet is a simple tool I used to manually connect to open TCP ports and talk to servers.
 
@@ -111,7 +111,7 @@ I tested three services:
 
 # Part 2 - Netowrking Essentials
 
-## DHCP: Give Me My Network Settings
+## DHCP (gives network settings)
 
 DHCP (Dynamic Host Configuration Protocol) lets devices automatically get:
 - An IP address
