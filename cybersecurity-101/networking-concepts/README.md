@@ -111,7 +111,7 @@ I tested three services:
 
 # Part 2 - Netowrking Essentials
 
-## DHCP (gives network settings)
+## DHCP
 
 DHCP (Dynamic Host Configuration Protocol) lets devices automatically get:
 - An IP address
