@@ -210,5 +210,126 @@ The router rewrites the IP and port in the packet headers and stores the mapping
 
 # Part 3 - Networking Core Protocols
 
+## DNS
+
+DNS is what lets us use human friendly domain names like `example.com` instead of IP addresses. When I type a URL, my system goes through a DNS lookup process to resolve the domain into an IP address.
+
+There are different record types in DNS, like:
+
+- `A`: maps to an IPv4 address
+- `AAAA`: maps to an IPv6 address
+- `MX`: specifies the mail server
+- `NS`: lists the authoritative nameservers
+
+By running `nslookup` and using tools like Wireshark, I could see this resolution process in action. DNS uses port 53 and works over both UDP and TCP depending on the request.
+
+---
+
+## WHOIS
+
+When someone registers a domain, their contact info is stored in the WHOIS database. Using the `whois` command, I was able to pull up details like:
+
+- Registrar
+- Registration and expiration dates
+- Registrant’s name and contact (unless hidden with privacy protection)
+
+It’s useful for figuring out who owns a domain and when it was created. WHOIS doesn’t use a specific port like other protocols, but it's important for internet transparency and record-keeping.
+
+---
+
+## HTTP and HTTPS
+
+I already use HTTP/HTTPS all the time without realizing it. These protocols handle how my browser communicates with websites.
+
+Some important HTTP methods I reviewed:
+
+- `GET`: retrieve a resource
+- `POST`: send data to a server
+- `PUT`: create or overwrite a resource
+- `DELETE`: remove a resource
+
+Using Wireshark and telnet, I got a look at raw HTTP requests and responses. HTTP uses port 80, while HTTPS which encrypts data uses port 443.
+
+---
+
+## FTP (File Transfer Protocol)
+
+FTP is a protocol for transferring files. It’s faster and more efficient than HTTP for this purpose.
+
+Some core FTP commands:
+
+- `USER` / `PASS`: login credentials
+- `RETR`: download a file
+- `STOR`: upload a file
+
+The default control connection is on port 21, but data transfers happen over a separate connection. I logged into an FTP server using `ftp`, listed files, and downloaded one using `get`. It was cool to see the exact commands and responses, and I also reviewed the session using Wireshark.
+
+---
+
+## SMTP (Sending Email)
+
+SMTP is the protocol used to send emails between clients and mail servers. It works like handing your message to a digital post office.
+
+Commands I practiced:
+
+- `HELO` / `EHLO`: initiate connection
+- `MAIL FROM`: sender
+- `RCPT TO`: recipient
+- `DATA`: body of the message
+- `.` (dot): ends the message
+
+SMTP runs on port 25. I sent a message using `telnet` and saw how each command was structured.
+
+---
+
+## POP3 (Receiving Email)
+
+POP3 is used to retrieve emails from a mail server. It’s more old school and designed for one device setups where the message is downloaded and then deleted from the server.
+
+Commands I worked with:
+
+- `USER`, `PASS`: login
+- `STAT`: message count
+- `LIST`: list all messages
+- `RETR`: retrieve a message
+- `DELE`: delete a message
+- `QUIT`: exit the session
+
+POP3 runs on TCP port 110. I was able to use `telnet` to log in and retrieve the same email I sent using SMTP earlier.
+
+---
+
+## IMAP (Email Sync)
+
+IMAP is a more modern email protocol compared to POP3. It keeps messages on the server and syncs status (read, unread, moved, deleted) across multiple clients. This is what makes email work so well across devices.
+
+A few useful IMAP commands:
+
+- `LOGIN`: authenticate
+- `SELECT inbox`: choose a mailbox
+- `FETCH`: get a message
+- `MOVE`, `COPY`: organize messages
+- `LOGOUT`: end the session
+
+IMAP uses TCP port 143. I tested the protocol using `telnet`, fetched a message, and saw how it maintains consistent state across clients.
+
+---
+
+## Protocols and their default ports:
+
+| **Protocol** | **Transport** | **Port** |
+|--------------|---------------|----------|
+| TELNET       | TCP           | 23       |
+| DNS          | UDP/TCP       | 53       |
+| HTTP         | TCP           | 80       |
+| HTTPS        | TCP           | 443      |
+| FTP          | TCP           | 21       |
+| SMTP         | TCP           | 25       |
+| POP3         | TCP           | 110      |
+| IMAP         | TCP           | 143      |
+
+---
+
+Part 4 - 
 
 
