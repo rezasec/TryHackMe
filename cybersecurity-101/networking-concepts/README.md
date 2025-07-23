@@ -1,6 +1,6 @@
-# Part 1 - Networking Concepts 
+## Part 1 - Networking Concepts 
 
-## OSI Model
+### OSI Model
 
 The OSI model explains how data flows through a network in seven layers. Each layer has a specific purpose, and understanding this really helped me grasp what’s going on when devices exchange information.
 
@@ -18,7 +18,7 @@ I used the mnemonic *Please Do Not Throw Spinach Pizza Away* to remember the ord
 
 ---
 
-## TCP/IP Model
+### TCP/IP Model
 
 Unlike the OSI model, the TCP/IP model is what we actually use today. It’s simpler and groups some of the OSI layers together.
 
@@ -33,7 +33,7 @@ Some books show a fifth layer (Physical), but the overall function stays the sam
 
 ---
 
-## IP Addresses and Subnets
+### IP Addresses and Subnets
 
 Every device needs a unique IP address. I revisited IPv4 addresses and how they’re structured into four octets. I also looked at how subnet masks work using CIDR notation (like `/24`), and how addresses are split between host and network portions.
 
@@ -49,17 +49,17 @@ I learned how routers forward packets between networks, like a post office decid
 
 ---
 
-## UDP and TCP
+### UDP and TCP
 
 Both of these live at Layer 4 and use **port numbers** to talk to specific processes.
 
-### UDP
+#### UDP
 - Doesn’t guarantee delivery.
 - No connection setup needed.
 - Faster and simpler.
 - Great for things like streaming or DNS.
 
-### TCP
+#### TCP
 - Reliable and connection-based.
 - Guarantees delivery, order, and integrity.
 - Used for web traffic, file transfers, and anything where data accuracy matters.
@@ -73,7 +73,7 @@ Once the handshake is done, data can be exchanged safely.
 
 ---
 
-## Encapsulation
+### Encapsulation
 
 Encapsulation is how data gets wrapped at each layer with its own header and sometimes trailer. Each layer only needs to care about its job.
 
@@ -88,7 +88,7 @@ The receiver reverses this whole process and gets back the original data.
 
 ---
 
-## Telnet
+### Telnet
 
 Telnet is a simple tool I used to manually connect to open TCP ports and talk to servers.
 
@@ -109,9 +109,9 @@ I tested three services:
 
 ---
 
-# Part 2 - Netowrking Essentials
+## Part 2 - Netowrking Essentials
 
-## DHCP
+### DHCP
 
 DHCP (Dynamic Host Configuration Protocol) lets devices automatically get:
 - An IP address
@@ -130,7 +130,7 @@ DHCP uses **UDP**, with the server listening on port **67** and the client sendi
 
 ---
 
-## ARP: Bridging Layer 3 Addressing to Layer 2 Addressing
+### ARP: Bridging Layer 3 Addressing to Layer 2 Addressing
 
 ARP (Address Resolution Protocol) is what lets devices on the same network translate **IP addresses into MAC addresses**.
 
@@ -145,7 +145,7 @@ ARP isn’t encapsulated inside IP or UDP, it rides directly inside an **Etherne
 
 ---
 
-## ICMP: Troubleshooting Networks
+### ICMP: Troubleshooting Networks
 
 ICMP (Internet Control Message Protocol) is used for **network diagnostics and error messages**.
 
@@ -158,17 +158,17 @@ Example: ping 192.168.11.1 -c 4
 
 ----
 
-## Routing
+### Routing
 
 For packets to reach the right destination, each router along the path needs to know which direction (link) to forward them. That’s where routing comes in.
 
-### How Routing Works: 
+#### How Routing Works: 
 
 When I send data to a web server, my packets might pass through multiple routers. Each one makes a decision about where to send the packet next based on what it knows about the network.
 
 The goal is to choose the best path, and there’s usually more than one possible route. So routers rely on routing algorithms and protocols to keep track of paths.
 
-### Routing Protocols: 
+#### Routing Protocols: 
 
 - **OSPF** (Open Shortest Path First)  
   Builds a full map of the network and calculates the shortest path based on link cost. Common in enterprise networks.
@@ -184,11 +184,11 @@ The goal is to choose the best path, and there’s usually more than one possibl
 
 ---
 
-## NAT
+### NAT
 
 NAT (Network Address Translation) helps solve the IPv4 address shortage by letting multiple devices in a private network share a single public IP.
 
-### What NAT Does
+#### What NAT Does
 
 Instead of giving every device a public IP, a NAT enabled router translates private IP addresses into one public IP address and keeps track of all active connections.
 
@@ -200,7 +200,7 @@ Instead of giving every device a public IP, a NAT enabled router translates priv
 
 The router rewrites the IP and port in the packet headers and stores the mapping in a **NAT table**, so when a reply comes back, it knows which internal device to forward it to.
 
-### Why NAT Matters
+#### Why NAT Matters
 
 - Conserves IPv4 addresses
 - Allows large networks to function with one or two public IPs
@@ -208,9 +208,9 @@ The router rewrites the IP and port in the packet headers and stores the mapping
 
 ------
 
-# Part 3 - Networking Core Protocols
+## Part 3 - Networking Core Protocols
 
-## DNS
+### DNS
 
 DNS is what lets us use human friendly domain names like `example.com` instead of IP addresses. When I type a URL, my system goes through a DNS lookup process to resolve the domain into an IP address.
 
@@ -225,7 +225,7 @@ By running `nslookup` and using tools like Wireshark, I could see this resolutio
 
 ---
 
-## WHOIS
+### WHOIS
 
 When someone registers a domain, their contact info is stored in the WHOIS database. Using the `whois` command, I was able to pull up details like:
 
@@ -237,7 +237,7 @@ It’s useful for figuring out who owns a domain and when it was created. WHOIS 
 
 ---
 
-## HTTP and HTTPS
+### HTTP and HTTPS
 
 I already use HTTP/HTTPS all the time without realizing it. These protocols handle how my browser communicates with websites.
 
@@ -252,7 +252,7 @@ Using Wireshark and telnet, I got a look at raw HTTP requests and responses. HTT
 
 ---
 
-## FTP (File Transfer Protocol)
+### FTP (File Transfer Protocol)
 
 FTP is a protocol for transferring files. It’s faster and more efficient than HTTP for this purpose.
 
@@ -266,7 +266,7 @@ The default control connection is on port 21, but data transfers happen over a s
 
 ---
 
-## SMTP (Sending Email)
+### SMTP (Sending Email)
 
 SMTP is the protocol used to send emails between clients and mail servers. It works like handing your message to a digital post office.
 
@@ -282,7 +282,7 @@ SMTP runs on port 25. I sent a message using `telnet` and saw how each command w
 
 ---
 
-## POP3 (Receiving Email)
+### POP3 (Receiving Email)
 
 POP3 is used to retrieve emails from a mail server. It’s more old school and designed for one device setups where the message is downloaded and then deleted from the server.
 
@@ -299,7 +299,7 @@ POP3 runs on TCP port 110. I was able to use `telnet` to log in and retrieve the
 
 ---
 
-## IMAP (Email Sync)
+### IMAP (Email Sync)
 
 IMAP is a more modern email protocol compared to POP3. It keeps messages on the server and syncs status (read, unread, moved, deleted) across multiple clients. This is what makes email work so well across devices.
 
@@ -315,7 +315,7 @@ IMAP uses TCP port 143. I tested the protocol using `telnet`, fetched a message,
 
 ---
 
-## Protocols and their default ports:
+### Protocols and their default ports:
 
 | **Protocol** | **Transport** | **Port** |
 |--------------|---------------|----------|
@@ -330,6 +330,97 @@ IMAP uses TCP port 143. I tested the protocol using `telnet`, fetched a message,
 
 ---
 
-# Part 4 - Networking Secure Protocols 
+## Part 4 - Networking Secure Protocols 
 
+### Introduction
 
+Many everyday protocols (HTTP, FTP, SMTP, etc.) were never designed with security in mind. That means attackers could easily read or manipulate data like passwords, credit cards, or email content. The solution was secure versions built using **TLS**, **SSH**, and **VPNs** to ensure **confidentiality**, **integrity**, and **authenticity** of data in transit.
+
+---
+
+### TLS (Transport Layer Security)
+
+TLS is the evolution of SSL and is now the standard for encrypting communication between a client and a server. It operates at the transport layer and protects against interception and tampering.
+
+Some key points:
+- TLS was developed to address the security flaws in early SSL.
+- It's widely used today in protocols like **HTTPS**, **SMTPS**, and **IMAPS**.
+- Servers identify themselves using TLS certificates (usually signed by Certificate Authorities).
+- Let’s Encrypt provides free TLS certificates.
+- Without TLS, we wouldn’t be able to use the internet securely for shopping, banking, or email.
+
+---
+
+### HTTPS
+
+- HTTP runs on port 80 and sends all data in plaintext.
+- HTTPS runs on port 443 and encrypts data after a TLS handshake.
+- With HTTPS, packet sniffers only see encrypted "Application Data" and not the actual content.
+- In Wireshark, we can only decrypt HTTPS if we have the **private key** or **SSL session keys**.
+- TLS doesn’t modify TCP/IP or HTTP itself, it just wraps the HTTP traffic in encryption.
+
+---
+
+### SMTPS, POP3S, IMAPS
+
+These are just the secure versions of email protocols:
+
+| Protocol | Insecure Port | Secure Port |
+|----------|---------------|-------------|
+| SMTP     | 25            | 465, 587    |
+| POP3     | 110           | 995         |
+| IMAP     | 143           | 993         |
+
+By using TLS, they become **SMTPS**, **POP3S**, and **IMAPS**. The process is the same as HTTPS, TLS wraps the original protocol without changing its structure.
+
+---
+
+### SSH (Secure Shell)
+
+SSH replaced TELNET for secure remote access. It encrypts all data and supports:
+
+- Password, public key, and two factor authentication
+- End to end encryption to prevent eavesdropping
+- Integrity protection
+- Tunneling other protocols
+- GUI forwarding over X11
+
+The standard port is **22**, and most SSH clients today use **OpenSSH**.
+
+---
+
+### SFTP vs FTPS
+
+- **SFTP** (SSH File Transfer Protocol) uses port 22 and is part of the SSH suite. It’s simple to set up if SSH is already enabled.
+- **FTPS** (File Transfer Protocol Secure) is FTP over TLS, usually on port **990**.
+- SFTP is generally easier to use and firewall friendly.
+- FTPS needs proper TLS certificates and can be more complex due to separate control and data channels.
+
+---
+
+### VPN (Virtual Private Network)
+
+VPNs let companies securely connect remote users or branches to the main office over the public internet.
+
+Key takeaways:
+- Creates a **private encrypted tunnel** over a public network.
+- Masks your IP address and can bypass geographic restrictions.
+- Your ISP only sees encrypted data, not the content or destination.
+- Some VPNs don’t route all traffic, others might leak DNS or IP information.
+- Laws around VPNs vary by country, so usage isn’t always legal.
+
+---
+
+### Closing Notes
+
+We looked at **three main approaches** to securing network traffic:
+
+1. **TLS** – Easily secures many application protocols like HTTP, SMTP, and POP3.
+2. **SSH** – Perfect for remote login, tunneling, and file transfer.
+3. **VPNs** – Great for creating secure network tunnels across locations.
+
+Finally, we used **Wireshark** and **SSL key logs** to decrypt a TLS packet capture and find a password inside encrypted traffic, showing how encryption works in the real world.
+
+-----
+
+## Part 5 - Wireshark: The Basics
