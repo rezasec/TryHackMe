@@ -60,7 +60,7 @@ Both of these live at Layer 4 and use **port numbers** to talk to specific proce
 - Great for things like streaming or DNS.
 
 #### TCP
-- Reliable and connection-based.
+- Reliable and connection based.
 - Guarantees delivery, order, and integrity.
 - Used for web traffic, file transfers, and anything where data accuracy matters.
 
