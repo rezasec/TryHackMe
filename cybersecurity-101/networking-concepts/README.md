@@ -35,7 +35,7 @@ Some books show a fifth layer (Physical), but the overall function stays the sam
 
 ### IP Addresses and Subnets
 
-Every device needs a unique IP address. I revisited IPv4 addresses and how they’re structured into four octets. I also looked at how subnet masks work using CIDR notation (like `/24`), and how addresses are split between host and network portions.
+Every device needs a unique IP address. IPv4 addresses structured into four octets. I looked at how subnet masks work using CIDR notation (like `/24`), and how addresses are split between host and network portions.
 
 Private IP ranges:
 
@@ -45,7 +45,7 @@ Private IP ranges:
 
 Public IPs are routable on the internet, but private ones are not. To connect out, private addresses rely on NAT at the router level.
 
-I learned how routers forward packets between networks, like a post office deciding the next step to deliver mail.
+Routers forward packets between networks, like a post office deciding the next step to deliver mail.
 
 ---
 
