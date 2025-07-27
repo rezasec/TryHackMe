@@ -2,7 +2,7 @@
 
 ### OSI Model
 
-The OSI model explains how data flows through a network in seven layers. Each layer has a specific purpose, and understanding this really helped me grasp what’s going on when devices exchange information.
+The OSI model explains how data flows through a network in seven layers. 
 
 | Layer | Name             | Main Function                                  | Example Protocols           |
 |-------|------------------|------------------------------------------------|------------------------------|
