@@ -29,7 +29,7 @@ Unlike the OSI model, the TCP/IP model is what we actually use today. It’s sim
 | Internet       | Network                     | IP, ICMP, IPSec                       |
 | Link           | Data Link + Physical        | Ethernet, WiFi                        |
 
-Some books show a fifth layer (Physical), but the overall function stays the same. This model was originally built to survive failures and reroute traffic — something that’s still very relevant.
+Some books show a fifth layer (Physical), but the overall function stays the same. This model was originally built to survive failures and reroute traffic. 
 
 ---
 
