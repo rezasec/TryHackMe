@@ -411,16 +411,4 @@ Key takeaways:
 
 ---
 
-### Closing Notes
-
-I looked at **three main approaches** to securing network traffic:
-
-1. **TLS** – Easily secures many application protocols like HTTP, SMTP, and POP3.
-2. **SSH** – Perfect for remote login, tunneling, and file transfer.
-3. **VPNs** – Great for creating secure network tunnels across locations.
-
-Finally, I used **Wireshark** and **SSL key logs** to decrypt a TLS packet capture and find a password inside encrypted traffic, showing how encryption works in the real world.
-
------
-
 ## Part 5 - Wireshark: The Basics
