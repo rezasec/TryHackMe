@@ -109,7 +109,7 @@ I tested three services:
 
 ---
 
-## Part 2 - Netowrking Essentials
+## Part 2 - Networking Essentials
 
 ### DHCP
 
