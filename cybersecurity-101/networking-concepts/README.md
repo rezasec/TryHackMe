@@ -412,3 +412,84 @@ Key takeaways:
 ---
 
 ## Part 5 - Wireshark: The Basics
+
+## Introduction
+
+Wireshark is an open-source, cross-platform network packet analyser used for inspecting live traffic and saved packet captures (PCAP files). It is one of the most widely used tools for packet analysis, allowing detailed investigation at multiple layers of the OSI model.
+
+- Wireshark is capable of:
+  - **Sniffing live traffic**
+  - **Inspecting packet capture (PCAP) files**
+- Supports a wide range of network protocols
+- Provides GUI tools for protocol analysis and packet inspection
+
+---
+
+## The Wireshark Interface
+
+Wireshark’s main interface is divided into three panes:
+
+1. **Packet List Pane** — Displays each captured packet with summary info  
+   (Packet No., Time, Source, Destination, Protocol, Length, Info)
+2. **Packet Details Pane** — Decodes and displays protocol fields in a tree view
+3. **Packet Bytes Pane** — Shows the raw data in hexadecimal and ASCII
+
+---
+
+## Packet Dissection
+
+- **Packet Dissection** - breaks packets down into OSI layers.
+- Typical layers seen in an HTTP packet:
+  1. **Frame** (Layer 1) — Physical layer details
+  2. **Source [MAC]** (Layer 2) — Data Link layer addresses
+  3. **Source [IP]** (Layer 3) — Network layer IP addresses
+  4. **Protocol** (Layer 4) — Transport layer protocol (TCP/UDP) and ports
+  5. **Protocol Errors** — TCP reassembly info
+  6. **Application Protocol** (Layer 5+) — HTTP, FTP, SMB
+  7. **Application Data** — Application-specific payload
+
+Clicking a detail highlights the corresponding bytes in the Packet Bytes Pane.
+
+---
+
+## Packet Navigation
+
+- **Packet Numbers** — Unique ID for each packet
+- **Go to Packet** — Jump to a specific packet by number
+- **Find Packets** — Search by:
+  - Display filter
+  - Hex value
+  - String
+  - Regex
+- **Mark Packets** — Flag packets for later review 
+- **Packet Comments** — Add persistent notes within the capture file
+- **Export Packets** — Save selected packets to a new file
+- **Export Objects** — Extract files from supported protocols ( HTTP, SMB)
+- **Time Display Format** — Change between relative, absolute, UTC
+- **Expert Info** — Highlights warnings, errors, and notable events in captures
+
+---
+
+## Packet Filtering
+
+Wireshark supports two filter types:
+
+- **Capture Filters** — Apply before capture, limiting what is recorded
+- **Display Filters** — Apply after capture, limiting what is displayed
+
+Key filtering tools:
+
+1. **Apply as Filter** — Right-click any field to filter by its value  
+2. **Conversation Filter** — Show only packets from a specific conversation  
+3. **Colourise Conversation** — Highlight related packets without filtering  
+4. **Prepare as Filter** — Build a filter without immediately applying it  
+5. **Apply as Column** — Add a chosen field as a visible column  
+6. **Follow Stream** — Reconstruct application level data from TCP/UDP streams
+
+---
+
+## Part 6 - Tcpdump: The Basics
+
+
+
+
