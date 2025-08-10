@@ -490,6 +490,98 @@ Key filtering tools:
 
 ## Part 6 - Tcpdump: The Basics
 
+# Tcpdump: The Basics
+
+This module introduces **Tcpdump**, a command-line packet capture and analysis tool used for monitoring and inspecting network traffic. Tcpdump can capture live traffic or read from saved `.pcap` files, providing detailed insight into packet-level communication.
+
+---
+
+## Introduction
+Tcpdump is a versatile CLI based packet analyzer that:
+- Captures live traffic from network interfaces.
+- Reads and analyzes `.pcap` files.
+- Displays packet details in customizable formats.
+
+It is widely used in network troubleshooting, security analysis, and protocol research.
+
+---
+
+## Basic Packet Capture
+
+Tcpdump can capture live network traffic from a specific interface and optionally save it to a file for later analysis. This is useful for diagnosing issues, investigating suspicious activity, or learning how protocols function.
+
+To capture traffic, use `tcpdump -i <interface>`, replacing `<interface>` with the desired network interface (e.g., `eth0`, `wlan0`). If no interface is specified, Tcpdump defaults to the first available one.
+
+You can save the captured packets into a file for later inspection using `tcpdump -i eth0 -w capture.pcap`. The `-w` option writes the raw packet data to the specified file in `.pcap` format, which can be opened later with Tcpdump or Wireshark.
+
+To read and analyze a saved capture, use `tcpdump -r capture.pcap`. The `-r` option tells Tcpdump to read from a saved file instead of capturing live traffic.
+
+- `-i` selects the capture interface.
+- `-w` stores packets in a file for later analysis.
+- `-r` reads and inspects previously saved packet captures.
+- Capturing without filters records all visible packets, which can be excessive — filters are covered in later tasks.
+
+---
+
+## Filtering Captures
+Tcpdump supports powerful filters to capture only the packets you care about, reducing noise and file size. These filters follow the Berkeley Packet Filter (BPF) syntax and can be applied during live captures or when reading from a file.
+
+### Common Filter Types
+1. **Host Filters** — Capture traffic to or from a specific host:
+   - `tcpdump host 192.168.1.10` (traffic to/from a single IP)
+   - `tcpdump src host 192.168.1.10` (only packets from this IP)
+   - `tcpdump dst host 192.168.1.10` (only packets to this IP)
+
+2. **Network Filters** — Capture traffic within a subnet:
+   - `tcpdump net 192.168.1.0/24`
+
+3. **Port Filters** — Capture traffic on a specific port:
+   - `tcpdump port 80` (HTTP)
+   - `tcpdump src port 443` (packets from HTTPS)
+   - `tcpdump dst port 53` (packets to DNS)
+
+4. **Protocol Filters** — Capture only a specific protocol:
+   - `tcpdump icmp` (ping traffic)
+   - `tcpdump tcp`
+   - `tcpdump udp`
+
+5. **Logical Operators** — Combine filters:
+   - `and` — both conditions must match
+   - `or` — either condition can match
+   - `not` — exclude packets matching a condition  
+     Example: `tcpdump tcp and not port 22`
+
+- Filters drastically reduce capture size and focus the analysis.
+- Multiple conditions can be combined to target specific scenarios.
+
+---
+
+## Writing and Reading Packet Captures
+
+Tcpdump allows you to **save captured packets** to a file for later analysis or **read existing captures** without running a live capture. This is useful for sharing data, archiving captures, or analyzing traffic offline with other tools like Wireshark.
+
+### Saving Captures to a File
+Use the `-w` option to write captured packets to a file in `.pcap` format:
+- `tcpdump -w capture.pcap` — Saves all captured packets to `capture.pcap`
+- `tcpdump -i eth0 -w web_traffic.pcap` — Captures only from `eth0` and writes to file
+
+### Reading Captures from a File
+Use the `-r` option to read packets from a `.pcap` file:
+- `tcpdump -r capture.pcap` — Reads and displays all packets from the file
+- You can also apply filters while reading:
+  - `tcpdump -r capture.pcap port 80` — Shows only HTTP traffic from the saved file
+
+### Combining Options
+You can combine capture filters with file writing to save only relevant traffic:
+- `tcpdump -i eth0 port 443 -w https_only.pcap` — Saves only HTTPS traffic from `eth0`
+
+- `.pcap` files can be opened in both Tcpdump and Wireshark.
+- Use `-w` to capture without printing, which can reduce processing overhead.
+- Use `-r` to analyze saved captures offline, applying filters as needed.
+
+---
+
+Part 7 - Nmap: The Basics
 
 
 
