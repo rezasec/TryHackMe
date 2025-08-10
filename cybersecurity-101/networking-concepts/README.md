@@ -581,7 +581,4 @@ You can combine capture filters with file writing to save only relevant traffic:
 
 ---
 
-Part 7 - Nmap: The Basics
-
-
 
