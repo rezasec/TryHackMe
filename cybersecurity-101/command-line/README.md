@@ -2,7 +2,7 @@
 
 ## Basic System Information
 
-I learned how to get basic system details quickly:
+learned how to get basic system details quickly:
 
 - `set` shows environment variables, including the system’s executable path.
 - `ver` displays the Windows OS version.
