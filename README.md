@@ -27,6 +27,8 @@ It includes:
 ---
 
 ### Soc Analyst
+| Module | Description | Skills Practiced |
+|--------|-------------|------------------|
 ---------
 
 ## Certifications
