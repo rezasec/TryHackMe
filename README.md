@@ -26,6 +26,9 @@ It includes:
 | [Networking Concepts](./cybersecurity-101/networking-concepts) | Learned core networking fundamentals including OSI and TCP/IP models, IP addressing and subnets, routing, NAT, and encapsulation. Explored key protocols such as DNS, HTTP/S, FTP, SMTP, POP3, IMAP, Telnet, DHCP, ARP, and ICMP, along with secure versions (TLS, SSH, VPNs). Practiced using Wireshark and Tcpdump to capture, filter, and analyze traffic for troubleshooting and security insights. | OSI/TCP-IP models, subnetting, NAT, routing protocols, DHCP, DNS, HTTP/S, FTP, SMTP, POP3, IMAP, Telnet, ARP, ICMP, TLS/SSH/VPNs, packet capture and analysis with Wireshark and Tcpdump
 ---
 
+### Soc Analyst
+---------
+
 ## Certifications
 
 ### Pre Security 
