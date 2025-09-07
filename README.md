@@ -23,7 +23,7 @@ It includes:
 | Module | Description | Skills Practiced |
 |--------|-------------|------------------|
 | [Command Line](./cybersecurity-101/command-line) | Practiced core command line skills across Windows command line, Windows PowerShell, and Linux shells. Navigated files and directories, managed users, handled permissions, interacted with services, and automated tasks. Also worked with process monitoring, hashing, remote execution, and scripting basics. | File system navigation, user and permission management, file operations, service control, PowerShell scripting, hashing, remote command execution, cross platform command line usage |
-| [Networking Concepts](./cybersecurity-101/networking-concepts) | 
+| [Networking Concepts](./cybersecurity-101/networking-concepts) | Learned core networking fundamentals including OSI and TCP/IP models, IP addressing and subnets, routing, NAT, and encapsulation. Explored key protocols such as DNS, HTTP/S, FTP, SMTP, POP3, IMAP, Telnet, DHCP, ARP, and ICMP, along with secure versions (TLS, SSH, VPNs). Practiced using Wireshark and Tcpdump to capture, filter, and analyze traffic for troubleshooting and security insights. | OSI/TCP-IP models, subnetting, NAT, routing protocols, DHCP, DNS, HTTP/S, FTP, SMTP, POP3, IMAP, Telnet, ARP, ICMP, TLS/SSH/VPNs, packet capture and analysis with Wireshark and Tcpdump
 ---
 
 ## Certifications
